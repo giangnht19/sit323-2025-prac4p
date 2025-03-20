@@ -34,6 +34,10 @@ function isValidNumber(num1, num2) {
     return !isNaN(parseFloat(num1)) && !isNaN(parseFloat(num2));
 }
 
+app.get('/', (req, res) => {
+    res.send(`Server is running`);
+})
+
 app.listen(port, () => {
     console.log(`Microservice running at http://localhost:${port}`);
 })
